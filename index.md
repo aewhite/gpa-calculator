@@ -3,13 +3,14 @@
 <textarea id="input" style="width:100%"  placeholder="Enter grades here..."></textarea>
 
 ### Results
-
+<div sytle="width:25%">
 |          |                                         |
 |----------|-----------------------------------------|
 | Sum      | {::nomarkdown}<div id="sum"></div>{:/}  |
 | Count    | {::nomarkdown}<div id="count"></div>{:/}  |
 | Weighted | {::nomarkdown}<div id="weighted"></div>{:/}  |
 | GPA      | {::nomarkdown}<div id="gpa"></div>{:/}  |
+</div>
 
 <script>
 const gradeValues = {
