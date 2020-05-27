@@ -1,13 +1,13 @@
 ## GPA Calculator
 
-<textarea id="input" style="width:100%"  placeholder="Enter grades here..."/>
+<textarea id="input" style="width:100%"  placeholder="Enter grades here..."></textarea>
 
 ### Results
 
-- Sum: <div id="sum" />
-- Count: <div id="sum" />
-- Weighted: <div id="sum" />
-- GPA: <div id="sum" />
+- Sum: <div id="sum"></div>
+- Count: <div id="sum"></div>
+- Weighted: <div id="sum"></div>
+- GPA: <div id="sum"></div>
 
 <script>
 const gradeValues = {
