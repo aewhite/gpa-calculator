@@ -21,7 +21,7 @@ const gradeValues = {
         'B': 4,
         'C': 3,
         'D': 2,
-        'F': 1,
+        'F': 0,
         }
 let input = document.getElementById("input"); 
 input.addEventListener("input", function() {
