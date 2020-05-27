@@ -3,7 +3,7 @@
 <textarea id="input" style="width:100%"  placeholder="Enter grades here..."></textarea>
 
 ### Results
-|          |                                              |
+
 |:---------|:---------------------------------------------|
 | Sum      | {::nomarkdown}<div id="sum"></div>{:/}       |
 | Count    | {::nomarkdown}<div id="count"></div>{:/}     |
