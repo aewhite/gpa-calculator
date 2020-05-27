@@ -5,11 +5,13 @@
 ### Results
 
 <div class="table-wrapper" style="width:25%" markdown="block">
+	
 |:---------|:---------------------------------------------|
 | Sum      | {::nomarkdown}<div id="sum"></div>{:/}       |
 | Count    | {::nomarkdown}<div id="count"></div>{:/}     |
 | Weighted | {::nomarkdown}<div id="weighted"></div>{:/}  |
 | GPA      | {::nomarkdown}<div id="gpa"></div>{:/}       |
+
 </div>
 
 <script>
