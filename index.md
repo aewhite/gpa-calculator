@@ -4,10 +4,12 @@
 
 ### Results
 
-- Sum: <div id="sum"></div>
-- Count: <div id="sum"></div>
-- Weighted: <div id="sum"></div>
-- GPA: <div id="sum"></div>
+|          |                                         |
+|----------|-----------------------------------------|
+| Sum      | {::nomarkdown}<div id="sum"></div>{:/}  |
+| Count    | {::nomarkdown}<div id="count"></div>{:/}  |
+| Weighted | {::nomarkdown}<div id="weighted"></div>{:/}  |
+| GPA      | {::nomarkdown}<div id="gpa"></div>{:/}  |
 
 <script>
 const gradeValues = {
