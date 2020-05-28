@@ -4,15 +4,10 @@
 
 ### Results
 
-<div class="table-wrapper" style="width:25%" markdown="block">
-	
-|:---------|:---------------------------------------------|
-| Sum      | {::nomarkdown}<div id="sum"></div>{:/}       |
-| Count    | {::nomarkdown}<div id="count"></div>{:/}     |
-| Weighted | {::nomarkdown}<div id="weighted"></div>{:/}  |
-| GPA      | {::nomarkdown}<div id="gpa"></div>{:/}       |
-
-</div>
+|:---------------|:------------------------------------------------ |:---------------|:------------------------------------------------ |
+| Weighted Count | {::nomarkdown}<div id="weightedCount"></div>{:/} | Count          | {::nomarkdown}<div id="count"></div>{:/}         |
+| Weighted Sum   | {::nomarkdown}<div id="weightedSum"></div>{:/}   | Unweighted Sum | {::nomarkdown}<div id="unweightedSum"></div>{:/}           |
+| Weighted GPA   | {::nomarkdown}<div id="weightedGpa"></div>{:/}   | Unweighted GPA | {::nomarkdown}<div id="unweightedGpa"></div>{:/} |
 
 <script>
 const gradeValues = {
@@ -27,24 +22,31 @@ const gradeValues = {
         'D': 2,
         'F': 0,
         }
-let input = document.getElementById("input"); 
+let input = document.getElementById("input");
 input.addEventListener("input", function() {
-	var sum = 0
+  var unweightedSum = 0
+  var weightedSum = 0
   var count = 0
-  var weighted = 0
+  var weightedCount = 0
   for (var i = 0; i < input.value.length; i++) {
-  	let c = input.value.charAt(i)
+    let c = input.value.charAt(i)
     if (/\s/.test(c)) { continue }
-    if (/[ABCDF]/.test(c)) { weighted++ }
-		let delta = gradeValues[c]
-    sum += delta
+    if (/[ABCDF]/.test(c)) { weightedCount++ }
+
+    let weightedDelta = gradeValues[c]
+    weightedSum += weightedDelta
+    let unweightedDelta = gradeValues[c.toLowerCase()]
+    unweightedSum += unweightedDelta
     count++
-	}
-  
-  let gpa = sum/count
-	document.getElementById("sum").innerHTML = sum;
-	document.getElementById("count").innerHTML = count;
-	document.getElementById("weighted").innerHTML = weighted;
-  document.getElementById("gpa").innerHTML = gpa.toFixed(2);
+  }
+
+  let weightedGpa = weightedSum/count
+  let unweightedGpa = unweightedSum/count
+  document.getElementById("unweightedSum").innerHTML = unweightedSum;
+  document.getElementById("weightedSum").innerHTML = weightedSum;
+  document.getElementById("count").innerHTML = count;
+  document.getElementById("weightedCount").innerHTML = weightedCount;
+  document.getElementById("weightedGpa").innerHTML = weightedGpa.toFixed(4);
+  document.getElementById("unweightedGpa").innerHTML = unweightedGpa.toFixed(4);
 })
 </script>
